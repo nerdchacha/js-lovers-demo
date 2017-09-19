@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { increment, decrement } from './actions'
 import store from './store'
+import style from './style.css'
 
 class App extends Component {
   constructor () {
@@ -17,8 +18,8 @@ class App extends Component {
   render() {
     const { count } = this.state
     return (
-      <div>
-        <div>Current count : {count}</div>
+      <div className="card">
+        <div>{count}</div>
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
       </div>
